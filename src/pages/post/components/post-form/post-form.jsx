@@ -48,11 +48,13 @@ const PostFormContainer = ({
 				value={imageUrlValue}
 				placeholder="Изображение..."
 				onChange={onImageChange}
+				autoComplete="off"
 			/>
 			<Input
 				value={titleValue}
 				placeholder="Заголовок..."
 				onChange={onTitleChange}
+				autoComplete="off"
 			/>
 			<SpecialPanel
 				id={id}

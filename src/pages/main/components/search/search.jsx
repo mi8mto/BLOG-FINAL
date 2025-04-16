@@ -9,6 +9,7 @@ const SearchContainer = ({ className, searchPhrase, onChange }) => {
 				value={searchPhrase}
 				placeholder="Поиск по заголовкам..."
 				onChange={onChange}
+				autoComplete="off"
 			/>
 			<Icon inactive={true} id="fa-search" size="21px" />
 		</div>
