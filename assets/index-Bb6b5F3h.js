@@ -247,7 +247,7 @@ attempted value: ${d}
 	& .comments-count {
 		display: flex;
 	}
-`;Um.propTypes={id:ce.string.isRequired,title:ce.string.isRequired,imageUrl:ce.string.isRequired,publishedAt:ce.string.isRequired,commentsCount:ce.number.isRequired};const oS=({className:n,searchPhrase:i,onChange:o})=>T.jsxs("div",{className:n,children:[T.jsx($n,{value:i,placeholder:"Поиск по заголовкам...",onChange:o}),T.jsx(it,{inactive:!0,id:"fa-search",size:"21px"})]}),bm=Pe(oS)`
+`;Um.propTypes={id:ce.string.isRequired,title:ce.string.isRequired,imageUrl:ce.string.isRequired,publishedAt:ce.string.isRequired,commentsCount:ce.number.isRequired};const oS=({className:n,searchPhrase:i,onChange:o})=>T.jsxs("div",{className:n,children:[T.jsx($n,{value:i,placeholder:"Поиск по заголовкам...",onChange:o,autoComplete:"off"}),T.jsx(it,{inactive:!0,id:"fa-search",size:"21px"})]}),bm=Pe(oS)`
 	display: flex;
 	position: relative;
 	width: 340px;
@@ -346,7 +346,7 @@ attempted value: ${d}
 	}
 `;Wm.propTypes={post:fr.POST.isRequired};const hS=n=>n.replaceAll("&nbsp;"," ").replace(/ +/," ").replaceAll("<br>",`
 `).replaceAll("<div>",`
-`).replaceAll("</div>",""),mS=({className:n,post:{id:i,title:o,imageUrl:l,content:u,publishedAt:c}})=>{const[d,h]=N.useState(l),[m,y]=N.useState(o),g=N.useRef(null);N.useLayoutEffect(()=>{h(l),y(o)},[l,o]);const x=Un(),w=wi(),P=hr(),_=()=>{const k=hS(g.current.innerHTML);x(Ux(P,{id:i,imageUrl:d,title:m,content:k})).then(({id:j})=>w(`/post/${j}`))},D=({target:k})=>h(k.value),F=({target:k})=>y(k.value);return T.jsxs("div",{className:n,children:[T.jsx($n,{value:d,placeholder:"Изображение...",onChange:D}),T.jsx($n,{value:m,placeholder:"Заголовок...",onChange:F}),T.jsx(Ec,{id:i,publishedAt:c,margin:"20px 0",editButton:T.jsx(it,{id:"fa-floppy-o",size:"21px",margin:"0 10px 0 0 ",onClick:_})}),T.jsx("div",{ref:g,contentEditable:!0,suppressContentEditableWarning:!0,className:"post-text",children:u})]})},Hm=Pe(mS)`
+`).replaceAll("</div>",""),mS=({className:n,post:{id:i,title:o,imageUrl:l,content:u,publishedAt:c}})=>{const[d,h]=N.useState(l),[m,y]=N.useState(o),g=N.useRef(null);N.useLayoutEffect(()=>{h(l),y(o)},[l,o]);const x=Un(),w=wi(),P=hr(),_=()=>{const k=hS(g.current.innerHTML);x(Ux(P,{id:i,imageUrl:d,title:m,content:k})).then(({id:j})=>w(`/post/${j}`))},D=({target:k})=>h(k.value),F=({target:k})=>y(k.value);return T.jsxs("div",{className:n,children:[T.jsx($n,{value:d,placeholder:"Изображение...",onChange:D,autoComplete:"off"}),T.jsx($n,{value:m,placeholder:"Заголовок...",onChange:F,autoComplete:"off"}),T.jsx(Ec,{id:i,publishedAt:c,margin:"20px 0",editButton:T.jsx(it,{id:"fa-floppy-o",size:"21px",margin:"0 10px 0 0 ",onClick:_})}),T.jsx("div",{ref:g,contentEditable:!0,suppressContentEditableWarning:!0,className:"post-text",children:u})]})},Hm=Pe(mS)`
 	& img {
 		float: left;
 		margin: 0 20px 10px 0;
