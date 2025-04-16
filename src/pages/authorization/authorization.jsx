@@ -92,6 +92,7 @@ const AuthorizationContainer = ({ className }) => {
 				<Input
 					type="password"
 					placeholder="Пароль..."
+					autoComplete="current-password"
 					{...register('password', {
 						onChange: () => setServerError(null),
 					})}

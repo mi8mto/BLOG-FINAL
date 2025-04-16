@@ -93,6 +93,7 @@ const RegistrationContainer = ({ className }) => {
 				<Input
 					type="password"
 					placeholder="Пароль..."
+					autoComplete="current-password"
 					{...register('password', {
 						onChange: () => setServerError(null),
 					})}
@@ -100,6 +101,7 @@ const RegistrationContainer = ({ className }) => {
 				<Input
 					type="password"
 					placeholder="Проверка пароля..."
+					autoComplete="current-password"
 					{...register('passcheck', {
 						onChange: () => setServerError(null),
 					})}
