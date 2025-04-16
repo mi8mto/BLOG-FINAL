@@ -85,6 +85,7 @@ const AuthorizationContainer = ({ className }) => {
 				<Input
 					type="text"
 					placeholder="Логин..."
+					autoComplete="username"
 					{...register('login', {
 						onChange: () => setServerError(null),
 					})}
